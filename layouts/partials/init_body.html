@@ -3,7 +3,9 @@
 
 {{/*Load Disqus JS for Posts*/}}
 {{ if eq $.Site.Params.contentType "posts" }}
+  {{ if ne  $.Site.DisqusShortname "" }}
 	<script id="dsq-count-scr" src="//{{ $.Site.DisqusShortname }}.disqus.com/count.js" async></script>
+  {{ end }}
 {{ end }}
 
 {{/*Google Analytics*/}}
